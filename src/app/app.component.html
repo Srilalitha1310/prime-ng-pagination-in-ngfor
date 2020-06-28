@@ -1,0 +1,7 @@
+<div *ngFor="let item of items; let i = index">
+    <p-paginator [rows]="paginatorAttributes[i]?.pageSize"
+                 [totalRecords]="50"
+                 [rowsPerPageOptions]="[10,20,30]"
+                 (onPageChange)="paginate(i, $event)"
+    ></p-paginator>
+</div>
